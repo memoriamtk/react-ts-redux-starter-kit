@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import AppWrapper from 'AppWrapper'
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+if (process.env.NODE_ENV === 'production') {
+  const noConsole = (): void => {}
+  console.log = noConsole
+  console.info = noConsole
+  console.warn = noConsole
+  console.error = noConsole
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppWrapper />
   </React.StrictMode>,
   document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+)
