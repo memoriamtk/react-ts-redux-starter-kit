@@ -2,7 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Element: React.FC<ButtonProps> = (props) => {
-  return <StyledButton {...props}>{props.text}</StyledButton>
+  return (
+    <StyledButton {...props}>
+      {props.text}
+      {props.children}
+    </StyledButton>
+  )
 }
 
 export type ButtonProps = {
