@@ -1,6 +1,8 @@
-import AppWrapper from 'AppWrapper'
+import AppWrapper from 'app/AppWrapper'
+import { store } from 'app/store'
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 
 if (process.env.NODE_ENV === 'production') {
   const noConsole = (): void => {}
@@ -12,7 +14,9 @@ if (process.env.NODE_ENV === 'production') {
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppWrapper />
+    <Provider store={store}>
+      <AppWrapper />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 )
