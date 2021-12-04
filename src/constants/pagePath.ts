@@ -3,6 +3,7 @@
  */
 const PAGE_PATH: PagePathProps = {
   INDEX: '/',
+  SAMPLE_COFFEE: '/sample-coffee',
   ERROR: '/error',
 }
 

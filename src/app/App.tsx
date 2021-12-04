@@ -1,5 +1,6 @@
 import Error from 'components/pages/Error'
 import Index from 'components/pages/Index'
+import SampleCoffee from 'components/pages/SampleCoffee'
 import PAGE_PATH from 'constants/pagePath'
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
@@ -10,6 +11,9 @@ const App: React.FC = () => {
       <Switch>
         <Route path={PAGE_PATH.INDEX} exact>
           <Index />
+        </Route>
+        <Route path={PAGE_PATH.SAMPLE_COFFEE} exact>
+          <SampleCoffee foo="foo" />
         </Route>
         <Route path={PAGE_PATH.ERROR} exact>
           <Error />
